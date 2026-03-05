@@ -5,13 +5,13 @@ pipeline {
 
         stage('Build Frontend Image') {
             steps {
-                sh 'docker build -t kaanak/full-frontend ./fullstack/frontend'
+                sh 'docker build -t kaanak/full-frontend ./frontend'
             }
         }
 
         stage('Build Backend Image') {
             steps {
-                sh 'docker build -t kaanak/full-backend ./fullstack/demo'
+                sh 'docker build -t kaanak/full-backend ./demo'
             }
         }
 
