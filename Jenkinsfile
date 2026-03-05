@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/kaanakkoyunlu/fullstack.git'
-            }
-        }
-
         stage('Build Frontend Image') {
             steps {
                 sh 'docker build -t kaanak/full-frontend ./frontend'
