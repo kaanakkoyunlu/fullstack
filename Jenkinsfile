@@ -3,6 +3,14 @@ pipeline {
 
     stages {
 
+	stage('Build Backend') {
+            steps {
+                dir('demo') {
+                    sh 'mvn clean package -DskipTests'
+                }
+            }
+        }
+
         stage('Build Frontend Image') {
             steps {
                 sh 'docker build -t kaanak/full-frontend ./frontend'
